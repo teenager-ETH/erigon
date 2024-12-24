@@ -1175,7 +1175,7 @@ func TestNewSimulatedBackend_AdjustTimeFailWithPostValidationSkip(t *testing.T) 
 	txdb, err := sim.DB().BeginRw(sim.m.Ctx)
 	require.NoError(t, err)
 	defer txdb.Rollback()
-	// Set this artifically to make sure the we do skip post validation
+	// Set this artificially to make sure the we do skip post validation
 	var k [8]byte
 	var v [8]byte
 	binary.BigEndian.PutUint64(k[:], 1)
